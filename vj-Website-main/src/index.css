@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bricolage Grotesque", sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  background-image: url("https://tympanus.net/Development/ImageExpansionTypography/img/.png");
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.outlet {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background: rgb(15, 50, 63);
+  background: linear-gradient(
+    124deg,
+    rgba(15, 50, 63, 1) 29%,
+    rgba(21, 94, 121, 1) 81%,
+    rgba(12, 154, 207, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-out 1s 2s forwards 1 normal;
+}
+
+#loading-none {
+  display: none;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* About.css */
+
+.founders-content::-webkit-scrollbar {
+  background: transparent;
+  height: 6px;
+  width: 6px;
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+.founders-content::-webkit-scrollbar-thumb {
+  background: rgb(24, 32, 48);
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+.founders-content::-webkit-scrollbar-track {
+  background-color: rgba(24, 32, 48, 0.442);
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+.testimonials::-webkit-scrollbar {
+  background: transparent;
+  height: 6px;
+  width: 6px;
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+.testimonials::-webkit-scrollbar-thumb {
+  background: rgb(177, 177, 177);
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+.testimonials::-webkit-scrollbar-track {
+  background-color: rgba(24, 32, 48, 0.442);
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+
+/* Team.css */
+.team-member {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='black' stroke-width='4' stroke-dasharray='2%2c 8' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
+}

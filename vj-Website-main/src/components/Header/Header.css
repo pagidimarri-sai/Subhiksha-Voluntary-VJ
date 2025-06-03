@@ -1,0 +1,130 @@
+.navbar {
+  width: 100%;
+  z-index: 102;
+  height: 4rem;
+  position: fixed;
+  background-color: #0f323f;
+}
+
+.navbar .nav-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+  height: 100%;
+  background-image: url("https://tympanus.net/Development/ImageExpansionTypography/img/noise.png");
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu > li {
+  margin: 0 1.6rem;
+}
+
+.nav-menu p {
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.contact-btn {
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+  background-color: #12162e;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: radial-gradient(100% 100% at 100% 0, #0d1026 0, #030d56 100%);
+}
+
+.header-bars {
+  display: none;
+}
+
+/* about drop down */
+
+.dropbtn {
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #0f323f;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+}
+.nav-link:hover {
+  text-decoration: none;
+}
+.about-dropdown:hover .dropdown-content {
+  display: block;
+}
+@media screen and (max-width: 1040px) {
+  .header-bars {
+    display: flex;
+    width: 35px;
+  }
+
+  .navbar {
+    padding: 0 1.5rem;
+  }
+
+  .navbar .nav-div {
+    margin: 0;
+  }
+
+  .nav-menu {
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    top: 4rem;
+    right: -100%;
+    width: 40%;
+    height: 100vh;
+    background: #0f323f;
+    transition: all 0.3s ease-out;
+    z-index: 10;
+    border-left: 1px solid rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-div ul {
+    list-style: none;
+  }
+
+  .nav-menu.active {
+    right: 0;
+    display: block;
+  }
+
+  .nav-item {
+    padding: 1.2rem 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .dropdown-content li {
+    padding: 0;
+  }
+  .dropdown-content {
+    position: absolute;
+    right: 40vw;
+    top: 4rem;
+  }
+}
